@@ -9,6 +9,7 @@ const App = () => {
   useEffect(() => {
     UserModel.get().then(userObject => {
       setUser(userObject) 
+      console.log(userObject);
     })
   }, [])
 
