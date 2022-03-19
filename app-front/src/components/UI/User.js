@@ -1,6 +1,6 @@
 // ui/User module
 import { useState, useEffect } from "react";
-import {User as UserModel} from "../model/User";
+import UserModel from "../model/User";
 
 const User = ({ 
   userObject,  // << user as a WHOLE object

@@ -1,5 +1,5 @@
 import User from "./components/UI/User";
-import {User as UserModel} from "./components/model/User";
+import APIService from "./components/services/APIService";
 import {useEffect, useState} from 'react';
 
 const App = () => {
@@ -7,9 +7,9 @@ const App = () => {
   let [user, setUser] = useState(null); 
   
   useEffect(() => {
-    UserModel.get().then(userObject => {
-      setUser(userObject) 
-      console.log(userObject);
+    APIService.getData({method: "GET", route: "/api/user"}).then(user => {
+      setUser(user) 
+      console.log(user);
     })
   }, [])
 
