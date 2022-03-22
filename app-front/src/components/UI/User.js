@@ -1,6 +1,7 @@
 // ui/User module
 import { useState, useEffect } from "react";
 import UserModel from "../model/User";
+import Reaction from "./reaction/Reaction";
 
 const User = ({ 
   userObject,  // << user as a WHOLE object
@@ -57,6 +58,7 @@ const User = ({
             </div>
           )
         }
+        <Reaction reactions={{type: 'like', icon: './icons/like.png'}} />
       </div>
     );
   }
